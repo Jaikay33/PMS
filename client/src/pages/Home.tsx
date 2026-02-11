@@ -62,7 +62,7 @@ export default function Home() {
             </h1>
             
             <h2 className="text-2xl md:text-3xl text-muted-foreground font-light mb-8">
-              Python Programmer Intern & Data Science Student
+              Ex Python Programmer Intern & Data Science Student
             </h2>
             
             <p className="text-lg text-muted-foreground/80 leading-relaxed max-w-xl mb-10 border-l-2 border-white/10 pl-6">
@@ -75,9 +75,11 @@ export default function Home() {
                   Get in Touch <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </Link>
-              <Button variant="outline" size="lg" className="rounded-full px-8 text-base border-white/10 hover:bg-white/5">
-                Download CV <Download className="ml-2 w-4 h-4" />
-              </Button>
+              <a href="/Jaikay_Kumar_CV.docx" download="Jaikay_Kumar_CV.docx">
+                <Button variant="outline" size="lg" className="rounded-full px-8 text-base border-white/10 hover:bg-white/5">
+                  Download CV <Download className="ml-2 w-4 h-4" />
+                </Button>
+              </a>
             </div>
 
             <div className="flex gap-6 mt-12 text-muted-foreground">
@@ -137,7 +139,7 @@ export default function Home() {
                   <Code size={24} />
                 </div>
                 <div>
-                  <div className="text-sm font-bold">Python Dev</div>
+                  <div className="text-sm font-bold">Insight Specialist</div>
                   <div className="text-xs text-muted-foreground">Passionate Coder</div>
                 </div>
               </div>
@@ -146,7 +148,7 @@ export default function Home() {
 
           <div className="order-1 lg:order-2">
             <h3 className="text-2xl font-bold mb-6 text-foreground">
-              Dedicated to solving complex problems through code.
+              Dedicated to solving complex problems through code to clean & analys the Data.
             </h3>
             <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
               <p>
@@ -166,7 +168,7 @@ export default function Home() {
                 <span className="text-sm text-muted-foreground uppercase tracking-wider">Years Learning</span>
               </div>
               <div className="flex flex-col gap-2">
-                <span className="text-4xl font-bold font-display text-primary">10+</span>
+                <span className="text-4xl font-bold font-display text-primary">02+</span>
                 <span className="text-sm text-muted-foreground uppercase tracking-wider">Projects Built</span>
               </div>
             </div>
@@ -219,10 +221,10 @@ export default function Home() {
               <span>Nov 2025</span>
               <span className="mx-2">•</span>
               <MapPin size={14} />
-              <span>Karachi</span>
+              <span>Hyerabad</span>
             </div>
             <p className="text-muted-foreground/80 max-w-2xl">
-              Participated in an intensive 12-hour coding challenge. Built a real-time data visualization tool using Python and Streamlit, securing a top position among 50+ participants.
+              Participated in an intensive 12-hour coding challenge. Built a real-time data visualization tool using Python and Streamlit, securing a top position among 150+ participants.
             </p>
           </motion.div>
         </div>
@@ -311,7 +313,14 @@ export default function Home() {
             <h3 className="text-2xl font-bold mb-2">HSSC Part II</h3>
             <p className="text-primary font-medium mb-4">BISE Hyderabad</p>
             <p className="text-muted-foreground">
-              Higher Secondary School Certificate with a focus on Computer Science and Mathematics.
+              Higher Secondary School Certificate in Meedical.
+              </p>
+                </div>
+                <div className="p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10">
+                  <h3 className="text-2xl font-bold mb-2">IELTS</h3>
+                  <p className="text-primary font-medium mb-4">AEO/IDP Pakistan</p>
+                  <p className="text-muted-foreground">
+                    Certificate of International language testing system with overall 6.5 bands.
             </p>
           </div>
         </div>
@@ -334,7 +343,7 @@ export default function Home() {
                   <div className="p-3 bg-white/5 rounded-full group-hover:bg-primary/20 transition-colors">
                     <Mail size={20} />
                   </div>
-                  <span>contact@jaikay.dev</span>
+                  <span>jaikishankumar862@gmail.com</span>
                 </a>
                 <a href="https://linkedin.com" className="flex items-center gap-4 text-foreground hover:text-primary transition-colors group">
                   <div className="p-3 bg-white/5 rounded-full group-hover:bg-primary/20 transition-colors">
