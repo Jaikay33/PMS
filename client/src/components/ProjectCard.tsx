@@ -13,6 +13,14 @@ interface ProjectProps {
 }
 
 export function ProjectCard({ title, description, tags, link, github, delay = 0 }: ProjectProps) {
+  const handleClick = () => {
+    if (github) {
+      window.open(github, "_blank", "noopener,noreferrer");
+    } else if (link) {
+      window.open(link, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -20,8 +28,10 @@ export function ProjectCard({ title, description, tags, link, github, delay = 0 
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
       whileHover={{ y: -5 }}
+      onClick={handleClick}
+      className="cursor-pointer"
     >
-      <Card className="glass-card h-full flex flex-col border-white/5 bg-transparent overflow-hidden group">
+      <Card className="glass-card h-full flex flex-col border-white/5 bg-transparent overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/20">
         <CardHeader className="pb-4">
           <div className="flex justify-between items-start">
             <h3 className="text-xl font-bold font-display group-hover:text-primary transition-colors">
@@ -29,24 +39,18 @@ export function ProjectCard({ title, description, tags, link, github, delay = 0 
             </h3>
             <div className="flex gap-2">
               {github && (
-                <a 
-                  href={github} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                <div 
                   className="text-muted-foreground hover:text-white transition-colors"
                 >
                   <Github size={20} />
-                </a>
+                </div>
               )}
               {link && (
-                <a 
-                  href={link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                <div 
                   className="text-muted-foreground hover:text-white transition-colors"
                 >
                   <ExternalLink size={20} />
-                </a>
+                </div>
               )}
             </div>
           </div>

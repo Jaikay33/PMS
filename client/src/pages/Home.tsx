@@ -286,14 +286,14 @@ export default function Home() {
             title="Translator Pro App"
             description="A desktop GUI application built with Python and Tkinter that integrates the Google Translate API. Features real-time translation, language detection, and a user-friendly interface."
             tags={["Python", "Tkinter", "API Integration", "GUI"]}
-            github="https://github.com/Jaikay33"
+            github="https://github.com/Jaikay33/Project-Translator-Pro"
             delay={0}
           />
           <ProjectCard 
             title="Data Analysis Dashboard"
             description="Interactive web dashboard for cleaning, analyzing, and visualizing complex datasets. Built with Streamlit and Pandas to provide actionable business insights."
             tags={["Python", "Streamlit", "Pandas", "Visualization"]}
-            github="https://github.com/Jaikay33"
+            github="https://github.com/Jaikay33/SMIT-CODING-NIGHT"
             delay={0.2}
           />
         </div>
