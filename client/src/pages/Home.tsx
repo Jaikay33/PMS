@@ -28,9 +28,12 @@ export default function Home() {
     },
   });
 
-  const onSubmit = (data: MessageInput) => {
+    const onSubmit = (data: MessageInput) => {
     contactMutation.mutate(data, {
-      onSuccess: () => form.reset(),
+      onSuccess: () => {
+        form.reset();
+        window.location.href = `mailto:jaikishankumar862@gmail.com?subject=Contact from ${data.name}&body=From: ${data.name} (${data.email})%0D%0A%0D%0AMessage:%0D%0A${data.message}`;
+      },
     });
   };
 
@@ -129,8 +132,8 @@ export default function Home() {
               <div className="absolute inset-0 border-2 border-primary/20 rounded-full" />
               <div className="absolute inset-4 rounded-full overflow-hidden shadow-2xl">
                 <img 
-                  src={profileCasual} 
-                  alt="Jaikay Kumar Casual" 
+                  src="/images/profile-hackathon.jpeg" 
+                  alt="Jaikay Kumar Hackathon" 
                   className="w-full h-full object-cover"
                 />
               </div>
