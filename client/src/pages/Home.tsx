@@ -62,11 +62,11 @@ export default function Home() {
             </h1>
             
             <h2 className="text-2xl md:text-3xl text-muted-foreground font-light mb-8">
-              Ex Python Programmer Intern & Data Science Student
+            Python Programmer & Data Science Student 
             </h2>
             
             <p className="text-lg text-muted-foreground/80 leading-relaxed max-w-xl mb-10 border-l-2 border-white/10 pl-6">
-              Transforming raw data into actionable insights and building robust Python applications that solve real-world problems.
+              Transforming raw data into actionable insights and building robust applications that solve real-world problems.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -152,23 +152,23 @@ export default function Home() {
             </h3>
             <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
               <p>
-                Currently enrolled in SMIT's Data Science and AI course, I am building a strong foundation in Python programming and data analysis.
+                Currently enrolled in SMIT's Data Science and AI course (May 2025 – April 2026), I am building a strong foundation in Python programming and data analysis.
               </p>
               <p>
                 My journey into tech started with a curiosity about how data can influence decisions. Now, I'm transforming that curiosity into technical expertise, working on projects that bridge the gap between raw data and meaningful insights.
               </p>
               <p>
-                When I'm not coding, I'm exploring new libraries, participating in hackathons, or learning about the latest advancements in AI.
+                I recently participated in the Indus AI Week Hackathon, where I developed SentinelPatch, an AI-powered security orchestrator.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-6 mt-10">
               <div className="flex flex-col gap-2">
-                <span className="text-4xl font-bold font-display text-primary">02+</span>
-                <span className="text-sm text-muted-foreground uppercase tracking-wider">Years Learning</span>
+                <span className="text-4xl font-bold font-display text-primary">03+</span>
+                <span className="text-sm text-muted-foreground uppercase tracking-wider">Hackathons</span>
               </div>
               <div className="flex flex-col gap-2">
-                <span className="text-4xl font-bold font-display text-primary">02+</span>
+                <span className="text-4xl font-bold font-display text-primary">03+</span>
                 <span className="text-sm text-muted-foreground uppercase tracking-wider">Projects Built</span>
               </div>
             </div>
@@ -193,13 +193,13 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
               <Calendar size={14} />
-              <span>June 2025 - Present</span>
+              <span>June 2025 - June 2025</span>
               <span className="mx-2">•</span>
               <MapPin size={14} />
               <span>Remote</span>
             </div>
             <p className="text-muted-foreground/80 max-w-2xl">
-              Developing Python scripts for automation and data processing tasks. Collaborating with senior developers to optimize code performance and maintain best practices.
+              Completed an intensive internship focusing on Python programming, automation, and data processing.
             </p>
           </motion.div>
 
@@ -213,6 +213,31 @@ export default function Home() {
           >
             <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-blue-500 ring-4 ring-background" />
             <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mb-2">
+              <h3 className="text-xl font-bold">Indus AI week | Hackathon</h3>
+              <Badge variant="outline" className="w-fit">SMIT Saylani Mass IT</Badge>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
+              <Calendar size={14} />
+              <span>Feb 2026</span>
+              <span className="mx-2">•</span>
+              <MapPin size={14} />
+              <span>Hyderabad</span>
+            </div>
+            <p className="text-muted-foreground/80 max-w-2xl">
+              Developed SentinelPatch, an AI-powered security orchestrator for vulnerability detection and automated patching.
+            </p>
+          </motion.div>
+
+          {/* Item 3 */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="relative pl-8 md:pl-12"
+          >
+            <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-blue-500 ring-4 ring-background" />
+            <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mb-2">
               <h3 className="text-xl font-bold">Coding Night / Hackathon</h3>
               <Badge variant="outline" className="w-fit">SMIT Saylani Mass IT</Badge>
             </div>
@@ -221,10 +246,10 @@ export default function Home() {
               <span>Nov 2025</span>
               <span className="mx-2">•</span>
               <MapPin size={14} />
-              <span>Hyerabad</span>
+              <span>Hyderabad</span>
             </div>
             <p className="text-muted-foreground/80 max-w-2xl">
-              Participated in an intensive 12-hour coding challenge. Built a real-time data visualization tool using Python and Streamlit, securing a top position among 150+ participants.
+              Built an interactive data visualization dashboard using Streamlit and Pandas during a 12-hour coding challenge.
             </p>
           </motion.div>
         </div>
@@ -264,7 +289,7 @@ export default function Home() {
         </div>
 
         <div className="mt-12 flex flex-wrap gap-3 justify-center">
-          {["Data Visualization", "Git & GitHub", "SQL", "Teamwork", "Problem Solving", "Tkinter", "Matplotlib", "Seaborn"].map((tag, i) => (
+          {["Data Visualization", "Git & GitHub", "SQL", "Teamwork", "Problem Solving", "Tkinter", "Fast API", "Matplotlib", "Seaborn"].map((tag, i) => (
             <motion.span
               key={tag}
               initial={{ opacity: 0, scale: 0.8 }}
@@ -281,13 +306,20 @@ export default function Home() {
 
       {/* Projects Section */}
       <Section id="projects" title="Featured Projects" subtitle="Some of the things I've built recently.">
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ProjectCard 
+            title="SentinelPatch"
+            description="AI-powered security orchestrator developed for Indus AI Week. Detects and remediates web vulnerabilities by identifying exact code locations and generating autonomous patches."
+            tags={["TypeScript", "Next.js", "Tailwind CSS", "Security"]}
+            github="https://github.com/Jaikay33/SENTINELPATCH"
+            delay={0}
+          />
           <ProjectCard 
             title="Translator Pro App"
             description="A desktop GUI application built with Python and Tkinter that integrates the Google Translate API. Features real-time translation, language detection, and a user-friendly interface."
             tags={["Python", "Tkinter", "API Integration", "GUI"]}
             github="https://github.com/Jaikay33/Project-Translator-Pro"
-            delay={0}
+            delay={0.1}
           />
           <ProjectCard 
             title="Data Analysis Dashboard"
@@ -301,26 +333,26 @@ export default function Home() {
 
       {/* Education Section */}
       <Section id="education" title="Education">
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10">
             <h3 className="text-2xl font-bold mb-2">Data Science & AI</h3>
             <p className="text-primary font-medium mb-4">SMIT (Saylani Mass IT Training)</p>
             <p className="text-muted-foreground">
-              Intensive training program covering Python, Machine Learning, Deep Learning, and Generative AI.
+              Intensive training program (May 2025 – April 2026) covering Python, Machine Learning, Deep Learning, and Generative AI.
             </p>
           </div>
           <div className="p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10">
             <h3 className="text-2xl font-bold mb-2">HSSC Part II</h3>
             <p className="text-primary font-medium mb-4">BISE Hyderabad</p>
             <p className="text-muted-foreground">
-              Higher Secondary School Certificate in Meedical.
-              </p>
-                </div>
-                <div className="p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10">
-                  <h3 className="text-2xl font-bold mb-2">IELTS</h3>
-                  <p className="text-primary font-medium mb-4">AEO/IDP Pakistan</p>
-                  <p className="text-muted-foreground">
-                    Certificate of International language testing system with overall 6.5 bands.
+              Higher Secondary School Certificate (Apr 2023 – Aug 2025).
+            </p>
+          </div>
+          <div className="p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10">
+            <h3 className="text-2xl font-bold mb-2">IELTS</h3>
+            <p className="text-primary font-medium mb-4">IDP | British Council</p>
+            <p className="text-muted-foreground">
+              Listening: 7.5, Reading: 6.0, Writing: 6.0, Speaking: 6.0 | Overall: 6.5 (Dec 2025).
             </p>
           </div>
         </div>
@@ -345,11 +377,11 @@ export default function Home() {
                   </div>
                   <span>jaikishankumar862@gmail.com</span>
                 </a>
-                <a href="https://linkedin.com" className="flex items-center gap-4 text-foreground hover:text-primary transition-colors group">
+                <a href="https://linkedin.com/in/jaikishan-kumar" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-foreground hover:text-primary transition-colors group">
                   <div className="p-3 bg-white/5 rounded-full group-hover:bg-primary/20 transition-colors">
                     <Linkedin size={20} />
                   </div>
-                  <span>/in/jaikay-kumar</span>
+                  <span>/in/jaikishan-kumar</span>
                 </a>
                 <a href="https://github.com/Jaikay33" className="flex items-center gap-4 text-foreground hover:text-primary transition-colors group">
                   <div className="p-3 bg-white/5 rounded-full group-hover:bg-primary/20 transition-colors">
