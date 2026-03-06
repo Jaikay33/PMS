@@ -32,7 +32,9 @@ export default function Home() {
     contactMutation.mutate(data, {
       onSuccess: () => {
         form.reset();
-        window.location.href = `mailto:jaikishankumar862@gmail.com?subject=Contact from ${data.name}&body=From: ${data.name} (${data.email})%0D%0A%0D%0AMessage:%0D%0A${data.message}`;
+        const subject = encodeURIComponent(`Portfolio Contact from ${data.name}`);
+        const body = encodeURIComponent(`Message from Portfolio Website\n\nName: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`);
+        window.location.href = `mailto:jaikishankumar862@gmail.com?subject=${subject}&body=${body}`;
       },
     });
   };
@@ -370,7 +372,7 @@ export default function Home() {
             <div>
               <h2 className="text-4xl font-bold font-display mb-6">Let's Work Together</h2>
               <p className="text-muted-foreground mb-8">
-                I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                Drop your details to contact with me. Whether you have a question or just want to say hi, I'll try my best to get back to you!
               </p>
               
               <div className="space-y-6">
